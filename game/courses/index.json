@@ -1,0 +1,6 @@
+[
+  { "id": "l-shape", "name": "L-Shape Course", "difficulty": "Easy", "description": "An L-shaped minigolf course." },
+  { "id": "zigzag", "name": "Zigzag Gauntlet", "difficulty": "Hard", "description": "A narrow zigzag corridor with tight turns." },
+  { "id": "s-curve", "name": "S-Curve Slalom", "difficulty": "Medium", "description": "An S-shaped course with scattered obstacles." },
+  { "id": "billiards", "name": "Billiards Table", "difficulty": "Expert", "description": "A classic 8-ball pool table setup." }
+]

@@ -1,0 +1,44 @@
+{
+  "id": "s-curve",
+  "paradigm": "minigolf",
+  "name": "S-Curve Slalom",
+  "difficulty": "Medium",
+  "description": "An S-shaped course with scattered obstacles.",
+  "bounds": { "minX": -7, "maxX": 7, "minZ": -8, "maxZ": 8 },
+  "ballStart": { "x": -4, "z": 6 },
+  "holePosition": { "x": 4, "z": -6 },
+  "regions": [
+    { "id": "top", "type": "playable", "minX": -6.7, "maxX": 6.7, "minZ": 3, "maxZ": 7.7 },
+    { "id": "middle", "type": "playable", "minX": -6.7, "maxX": 6.7, "minZ": -3, "maxZ": 3 },
+    { "id": "bottom", "type": "playable", "minX": -6.7, "maxX": 6.7, "minZ": -7.7, "maxZ": -3 }
+  ],
+  "walls": [
+    { "id": "left", "type": "wall", "x1": -7, "z1": -8, "x2": -7, "z2": 8 },
+    { "id": "right", "type": "wall", "x1": 7, "z1": -8, "x2": 7, "z2": 8 },
+    { "id": "top", "type": "wall", "x1": -7, "z1": 8, "x2": 7, "z2": 8 },
+    { "id": "bottom", "type": "wall", "x1": -7, "z1": -8, "x2": 7, "z2": -8 }
+  ],
+  "obstacles": [
+    { "id": "obs1", "type": "obstacle", "x": 3, "z": 5, "radius": 1.2 },
+    { "id": "obs2", "type": "obstacle", "x": -2, "z": 2, "radius": 0.8 },
+    { "id": "obs3", "type": "obstacle", "x": 2, "z": 0, "radius": 0.8 },
+    { "id": "obs4", "type": "obstacle", "x": -3, "z": -2, "radius": 1.0 },
+    { "id": "obs5", "type": "obstacle", "x": 0, "z": -4, "radius": 0.7 },
+    { "id": "obs6", "type": "obstacle", "x": -2, "z": -6, "radius": 0.9 }
+  ],
+  "buildFloors": [ { "width": 14, "depth": 16, "x": 0, "z": 0 } ],
+  "buildWalls": [
+    { "x": -7, "z": 0, "w": 0.6, "d": 16.5, "name": "wall-left" },
+    { "x": 7, "z": 0, "w": 0.6, "d": 16.5, "name": "wall-right" },
+    { "x": 0, "z": 8, "w": 14.5, "d": 0.6, "name": "wall-top" },
+    { "x": 0, "z": -8, "w": 14.5, "d": 0.6, "name": "wall-bottom" }
+  ],
+  "buildObstacles": [
+    { "x": 3, "z": 5, "radius": 1.2, "name": "rock1" },
+    { "x": -2, "z": 2, "radius": 0.8, "name": "rock2" },
+    { "x": 2, "z": 0, "radius": 0.8, "name": "rock3" },
+    { "x": -3, "z": -2, "radius": 1.0, "name": "rock4" },
+    { "x": 0, "z": -4, "radius": 0.7, "name": "rock5" },
+    { "x": -2, "z": -6, "radius": 0.9, "name": "rock6" }
+  ]
+}

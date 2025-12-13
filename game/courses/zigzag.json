@@ -1,0 +1,59 @@
+{
+  "id": "zigzag",
+  "paradigm": "minigolf",
+  "name": "Zigzag Gauntlet",
+  "difficulty": "Hard",
+  "description": "A narrow zigzag corridor with tight turns.",
+  "bounds": { "minX": -7, "maxX": 7, "minZ": -8, "maxZ": 8 },
+  "ballStart": { "x": -5, "z": 6 },
+  "holePosition": { "x": 5, "z": -6 },
+  "regions": [
+    { "id": "start", "type": "playable", "minX": -6.7, "maxX": -2, "minZ": 4, "maxZ": 7.7 },
+    { "id": "corridor1", "type": "playable", "minX": -6.7, "maxX": -2, "minZ": 1, "maxZ": 4 },
+    { "id": "turn1", "type": "playable", "minX": -6.7, "maxX": 2, "minZ": -1, "maxZ": 1 },
+    { "id": "corridor2", "type": "playable", "minX": -0.5, "maxX": 2, "minZ": -1, "maxZ": 1 },
+    { "id": "turn2", "type": "playable", "minX": -0.5, "maxX": 6.7, "minZ": -4, "maxZ": 1 },
+    { "id": "corridor3", "type": "playable", "minX": 3, "maxX": 6.7, "minZ": -7.7, "maxZ": -4 }
+  ],
+  "walls": [
+    { "id": "left", "type": "wall", "x1": -7, "z1": -8, "x2": -7, "z2": 8 },
+    { "id": "top", "type": "wall", "x1": -7, "z1": 8, "x2": -2, "z2": 8 },
+    { "id": "right-top", "type": "wall", "x1": -2, "z1": 8, "x2": -2, "z2": 4 },
+    { "id": "zigzag1", "type": "wall", "x1": -2, "z1": 4, "x2": -2, "z2": 1 },
+    { "id": "zigzag2", "type": "wall", "x1": -2, "z1": 1, "x2": 2, "z2": 1 },
+    { "id": "zigzag3", "type": "wall", "x1": 2, "z1": 1, "x2": 2, "z2": -4 },
+    { "id": "zigzag4", "type": "wall", "x1": 2, "z1": -4, "x2": 3, "z2": -4 },
+    { "id": "bottom-left", "type": "wall", "x1": -7, "z1": -1, "x2": 0, "z2": -1 },
+    { "id": "mid-block", "type": "wall", "x1": 0, "z1": -1, "x2": 0, "z2": -4 },
+    { "id": "bottom", "type": "wall", "x1": 3, "z1": -8, "x2": 7, "z2": -8 },
+    { "id": "right", "type": "wall", "x1": 7, "z1": -8, "x2": 7, "z2": 8 }
+  ],
+  "obstacles": [
+    { "id": "rock1", "type": "obstacle", "x": -4, "z": 2.5, "radius": 0.6 },
+    { "id": "rock2", "type": "obstacle", "x": 5, "z": -2, "radius": 0.5 }
+  ],
+  "buildFloors": [
+    { "width": 5, "depth": 4, "x": -4.5, "z": 6 },
+    { "width": 5, "depth": 6, "x": -4.5, "z": 1.5 },
+    { "width": 10, "depth": 3, "x": -2, "z": 0 },
+    { "width": 8, "depth": 5, "x": 3, "z": -2 },
+    { "width": 4, "depth": 4, "x": 5, "z": -6 }
+  ],
+  "buildWalls": [
+    { "x": -7, "z": 5, "w": 0.6, "d": 6, "name": "wall-left-top" },
+    { "x": -4.5, "z": 8, "w": 5.5, "d": 0.6, "name": "wall-top" },
+    { "x": -2, "z": 6, "w": 0.6, "d": 4.5, "name": "wall-start-right" },
+    { "x": -2, "z": 2.5, "w": 0.6, "d": 3, "name": "wall-zig1" },
+    { "x": 0, "z": 1, "w": 4.5, "d": 0.6, "name": "wall-zig2" },
+    { "x": 2, "z": -1.5, "w": 0.6, "d": 5.5, "name": "wall-zig3" },
+    { "x": -3.5, "z": -1, "w": 7.5, "d": 0.6, "name": "wall-bottom-left" },
+    { "x": 0, "z": -2.5, "w": 0.6, "d": 3.5, "name": "wall-mid-block" },
+    { "x": 5, "z": -8, "w": 4.5, "d": 0.6, "name": "wall-bottom" },
+    { "x": 7, "z": 0, "w": 0.6, "d": 16, "name": "wall-right" },
+    { "x": -7, "z": -4.5, "w": 0.6, "d": 7, "name": "wall-left-bottom" }
+  ],
+  "buildObstacles": [
+    { "x": -4, "z": 2.5, "radius": 0.6, "name": "rock1" },
+    { "x": 5, "z": -2, "radius": 0.5, "name": "rock2" }
+  ]
+}

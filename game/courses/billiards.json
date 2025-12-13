@@ -1,0 +1,44 @@
+{
+  "id": "billiards",
+  "paradigm": "billiards",
+  "name": "Billiards Table",
+  "difficulty": "Expert",
+  "description": "A realistic billiards setup with 6 pockets and 2 target balls. Sink both balls to win!",
+  "bounds": { "minX": -4, "maxX": 4, "minZ": -7, "maxZ": 7 },
+  "ballStart": { "x": 0, "z": 4 },
+  "holePosition": { "x": 0, "z": -6 },
+  "pockets": [
+    { "id": "corner-tl", "x": -3.2, "z": -6.2, "radius": 1.2 },
+    { "id": "corner-tr", "x": 3.2, "z": -6.2, "radius": 1.2 },
+    { "id": "side-l", "x": -3.2, "z": 0, "radius": 1.0 },
+    { "id": "side-r", "x": 3.2, "z": 0, "radius": 1.0 },
+    { "id": "corner-bl", "x": -3.2, "z": 6.2, "radius": 1.2 },
+    { "id": "corner-br", "x": 3.2, "z": 6.2, "radius": 1.2 }
+  ],
+  "regions": [
+    { "id": "table", "type": "playable", "minX": -3.5, "maxX": 3.5, "minZ": -6.5, "maxZ": 6.5 }
+  ],
+  "walls": [
+    { "id": "left", "type": "wall", "x1": -3.5, "z1": -6.5, "x2": -3.5, "z2": 6.5 },
+    { "id": "right", "type": "wall", "x1": 3.5, "z1": -6.5, "x2": 3.5, "z2": 6.5 },
+    { "id": "top", "type": "wall", "x1": -3.5, "z1": -6.5, "x2": 3.5, "z2": -6.5 },
+    { "id": "bottom", "type": "wall", "x1": -3.5, "z1": 6.5, "x2": 3.5, "z2": 6.5 }
+  ],
+  "obstacles": [
+    { "id": "ball_1", "x": -1, "z": -2, "radius": 0.4, "dynamic": true, "color": "#ff0000" },
+    { "id": "ball_2", "x": 1, "z": -2, "radius": 0.4, "dynamic": true, "color": "#0000ff" }
+  ],
+  "buildFloors": [
+    { "width": 7, "depth": 13, "x": 0, "z": 0 }
+  ],
+  "buildWalls": [
+    { "x": -3.5, "z": 0, "w": 0.5, "d": 13.5, "name": "cushion-left" },
+    { "x": 3.5, "z": 0, "w": 0.5, "d": 13.5, "name": "cushion-right" },
+    { "x": 0, "z": -6.5, "w": 7.5, "d": 0.5, "name": "cushion-top" },
+    { "x": 0, "z": 6.5, "w": 7.5, "d": 0.5, "name": "cushion-bottom" }
+  ],
+  "buildObstacles": [
+    { "x": -1, "z": -2, "radius": 0.4, "name": "ball_1" },
+    { "x": 1, "z": -2, "radius": 0.4, "name": "ball_2" }
+  ]
+}

@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Minimal Minigolf</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            background: #073;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        body.ai-mode {
+            justify-content: flex-start !important;
+            padding-left: 40px;
+        }
+
+        #gameCanvas {
+            width: 360px;
+            height: 720px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        #ui {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            color: #fff;
+            font-family: sans-serif
+        }
+        
+        #ai-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.85);
+            color: #fff;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 11px;
+            padding: 8px 12px;
+            overflow-y: auto;
+            border-left: 2px solid #0af;
+            z-index: 2000;
+        }
+        
+        #ai-overlay.visible {
+            display: block;
+        }
+
+        #game-over-screen {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 24px;
+            border-radius: 12px;
+            text-align: center;
+            font-family: sans-serif;
+            min-width: 200px;
+            border: 2px solid #fff;
+            z-index: 1000;
+        }
+
+        #game-over-screen.visible {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        #game-over-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        #game-over-message {
+            font-size: 16px;
+            color: #ccc;
+        }
+
+        .btn {
+            background: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background: #45a049;
+        }
+        
+        #ai-overlay .status-line {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        
+        #ai-overlay .status-icon {
+            flex-shrink: 0;
+        }
+        
+        #ai-overlay .status-text {
+            color: #0af;
+            font-weight: bold;
+        }
+        
+        #ai-overlay .detail-text {
+            color: #aaa;
+            margin-left: 20px;
+        }
+        
+        #ai-overlay .thinking {
+            color: #fa0;
+        }
+        
+        #ai-overlay .success {
+            color: #0f0;
+        }
+        
+        #ai-overlay .error {
+            color: #f44;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="ui">Drag to aim, release to shoot</div>
+    <canvas id="gameCanvas"></canvas>
+    
+    <div id="game-over-screen">
+        <h2 id="game-over-title">Game Over</h2>
+        <div id="game-over-message"></div>
+        <button id="restart-btn" class="btn">Play Again</button>
+    </div>
+    <div id="ai-overlay">
+        <div id="ai-status"></div>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

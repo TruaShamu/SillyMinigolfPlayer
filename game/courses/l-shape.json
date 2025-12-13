@@ -1,0 +1,35 @@
+{
+  "id": "l-shape",
+  "paradigm": "minigolf",
+  "name": "L-Shape Course",
+  "difficulty": "Easy",
+  "description": "An L-shaped minigolf course.",
+  "bounds": { "minX": -7, "maxX": 9, "minZ": -8.5, "maxZ": 8.5 },
+  "ballStart": { "x": -5, "z": 6 },
+  "holePosition": { "x": 6, "z": -5 },
+  "regions": [
+    { "id": "vertical", "type": "playable", "minX": -6.7, "maxX": 0.7, "minZ": -7.7, "maxZ": 7.7 },
+    { "id": "horizontal", "type": "playable", "minX": 0.7, "maxX": 8.7, "minZ": -7.7, "maxZ": -2.3 }
+  ],
+  "walls": [
+    { "id": "left", "type": "wall", "x1": -7, "z1": -8.5, "x2": -7, "z2": 8.5 },
+    { "id": "top", "type": "wall", "x1": -7, "z1": 8, "x2": 1, "z2": 8 },
+    { "id": "inner-vertical", "type": "wall", "x1": 1, "z1": 8, "x2": 1, "z2": -2 },
+    { "id": "inner-horizontal", "type": "wall", "x1": 1, "z1": -2, "x2": 9, "z2": -2 },
+    { "id": "right", "type": "wall", "x1": 9, "z1": -2, "x2": 9, "z2": -8.5 },
+    { "id": "bottom", "type": "wall", "x1": 9, "z1": -8, "x2": -7, "z2": -8 }
+  ],
+  "obstacles": [],
+  "buildFloors": [
+    { "width": 8, "depth": 16, "x": -3, "z": 0 },
+    { "width": 10, "depth": 6, "x": 4, "z": -5 }
+  ],
+  "buildWalls": [
+    { "x": -7, "z": 0, "w": 0.6, "d": 17, "name": "wall-left" },
+    { "x": -3, "z": 8, "w": 8.5, "d": 0.6, "name": "wall-top" },
+    { "x": 1, "z": 2, "w": 0.6, "d": 12.5, "name": "wall-inner-vertical" },
+    { "x": 5, "z": -2, "w": 8.5, "d": 0.6, "name": "wall-inner-horizontal" },
+    { "x": 9, "z": -5, "w": 0.6, "d": 6.5, "name": "wall-right" },
+    { "x": 1, "z": -8, "w": 16.5, "d": 0.6, "name": "wall-bottom" }
+  ]
+}
